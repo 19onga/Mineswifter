@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_7" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OFK-zT-O0h">
+                                <rect key="frame" x="160" y="160" width="280" height="280"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="8xp-DK-IY7"/>
+                                    <constraint firstAttribute="height" constant="280" id="hew-6W-6Cu"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moves: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Niv-LW-rt8">
+                                <rect key="frame" x="160" y="448" width="69.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFT-0n-chR">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Mineswifter" id="0ba-qG-VcX"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b9h-nW-03w">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="New Game" id="Ehq-md-DBh">
+                                        <connections>
+                                            <action selector="newGamePressed" destination="BYZ-38-t0r" id="ofx-H9-qsf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: 0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hT-ww-v6R">
+                                <rect key="frame" x="382.5" y="448" width="57.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Xun-yI-UXX">
+                                <rect key="frame" x="160" y="124" width="280" height="29"/>
+                                <segments>
+                                    <segment title="Easy"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Hard"/>
+                                </segments>
+                                <connections>
+                                    <action selector="indexChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="VoZ-6c-gti"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OFK-zT-O0h" firstAttribute="top" secondItem="Xun-yI-UXX" secondAttribute="bottom" constant="8" id="2O1-UW-Snc"/>
+                            <constraint firstItem="JFT-0n-chR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="9BR-EX-p4b"/>
+                            <constraint firstItem="Niv-LW-rt8" firstAttribute="leading" secondItem="OFK-zT-O0h" secondAttribute="leading" id="AXC-rH-lGg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b9h-nW-03w" secondAttribute="bottom" id="GOe-IR-0bA"/>
+                            <constraint firstItem="Niv-LW-rt8" firstAttribute="top" secondItem="OFK-zT-O0h" secondAttribute="bottom" constant="8" id="H9c-Ft-4IR"/>
+                            <constraint firstItem="OFK-zT-O0h" firstAttribute="trailing" secondItem="Xun-yI-UXX" secondAttribute="trailing" id="MuH-Wx-q75"/>
+                            <constraint firstItem="2hT-ww-v6R" firstAttribute="centerY" secondItem="Niv-LW-rt8" secondAttribute="centerY" id="Rn7-w3-VnI"/>
+                            <constraint firstItem="OFK-zT-O0h" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="W36-pj-FAG"/>
+                            <constraint firstItem="OFK-zT-O0h" firstAttribute="centerX" secondItem="JFT-0n-chR" secondAttribute="centerX" id="YTy-ht-WpR"/>
+                            <constraint firstItem="JFT-0n-chR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="YvZ-3b-fJR"/>
+                            <constraint firstItem="OFK-zT-O0h" firstAttribute="leading" secondItem="Xun-yI-UXX" secondAttribute="leading" id="hWK-0d-9Ho"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JFT-0n-chR" secondAttribute="trailing" constant="-20" id="jha-mS-Vd1"/>
+                            <constraint firstItem="2hT-ww-v6R" firstAttribute="trailing" secondItem="OFK-zT-O0h" secondAttribute="trailing" id="mzV-bu-d42"/>
+                            <constraint firstItem="2hT-ww-v6R" firstAttribute="top" secondItem="OFK-zT-O0h" secondAttribute="bottom" constant="8" id="nrn-rU-7uh"/>
+                            <constraint firstItem="b9h-nW-03w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="sGp-c0-wCT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b9h-nW-03w" secondAttribute="trailing" constant="-20" id="wsu-9B-ZBe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="boardView" destination="OFK-zT-O0h" id="Vge-Ty-DhI"/>
+                        <outlet property="movesLabel" destination="Niv-LW-rt8" id="xhQ-zI-1tN"/>
+                        <outlet property="segmentedControl" destination="Xun-yI-UXX" id="j5u-Rl-MUu"/>
+                        <outlet property="timeLabel" destination="2hT-ww-v6R" id="vro-oS-ZwY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="243" y="339"/>
+        </scene>
+    </scenes>
+</document>
